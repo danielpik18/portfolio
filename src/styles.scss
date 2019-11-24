@@ -1,1 +1,29 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import './colors.scss';
+@import url('https://fonts.googleapis.com/css?family=Sulphur+Point:300,400,700&display=swap');
+
+html, body{
+  margin: 0;
+  background-color: $black_light;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: $platinum;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: $scroll;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: $scroll_hover;
+}

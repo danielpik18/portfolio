@@ -1,0 +1,29 @@
+@import './../../colors.scss';
+
+.wrapper{
+  background-color: $black_light;
+  color: $platinum;
+  height: 100vh;
+}
+
+.intro{
+  position: absolute;
+  top: 36%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  animation-name: intro;
+  animation-duration: 1.4s;
+  -moz-animation-timing-function: ease-in-out;
+}
+
+@keyframes intro{
+  from{
+    opacity: 0;
+    transform: translate(-55%, -50%);
+  }
+  to{
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
