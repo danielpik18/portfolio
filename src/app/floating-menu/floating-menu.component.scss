@@ -1,6 +1,7 @@
 @import './../../colors.scss';
 
 .wrapper{
+  z-index: 999;
   color: $platinum;
   position: fixed;
   bottom: 6%;
@@ -80,4 +81,10 @@
     transform: translate(0%);
     opacity: 1;
   }
+}
+
+.router-link-active{
+  color: $gold;
+  font-weight: 700;
+  opacity: 1;
 }

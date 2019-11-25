@@ -1,7 +1,8 @@
 @import './../../colors.scss';
 
 .wrapper{
-  background-color: $black_light;
+  background-image: linear-gradient(to bottom, rgba($black_light, .98),rgba($black_light, .92)), url('./../../assets/coding-laptop.png');
+  background-size: cover;
   color: $platinum;
   height: 100vh;
 }

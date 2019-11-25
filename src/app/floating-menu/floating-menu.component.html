@@ -1,7 +1,8 @@
 <div class="wrapper">
   <div class="menu d-flex">
-    <div class="navbarLink" [routerLink]="['/']" routerLinkActive="router-link-active">INICIO</div>
-    <div class="navbarLink" [routerLink]="['/projects']">PROYECTOS</div>
+    <div class="navbarLink" [routerLink]="['/']" routerLinkActive="router-link-active"
+      [routerLinkActiveOptions]="{exact: true}">INICIO</div>
+    <div class="navbarLink" [routerLink]="['/projects']" routerLinkActive="router-link-active">PROYECTOS</div>
     <div class="navbarLink">HABILIDADES</div>
     <div class="navbarLink">CONTACTO</div>
   </div>
