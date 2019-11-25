@@ -1,6 +1,6 @@
-@import './../../colors.scss';
+@import "./../../colors.scss";
 
-.wrapper{
+.wrapper {
   z-index: 999;
   color: $platinum;
   position: fixed;
@@ -9,17 +9,17 @@
   transform: translate(-50%, 0);
 }
 
-.menu{
+.menu {
   animation-name: menuLinks;
   animation-duration: 1.2s;
   animation-timing-function: ease-in-out;
-  font-family: 'Sulphur Point', sans-serif;
-  letter-spacing: .2rem;
+  font-family: "Sulphur Point", sans-serif;
+  letter-spacing: 0.2rem;
   padding-bottom: 1.4rem;
   color: $white;
 }
 
-.bottomBorder{
+.bottomBorder {
   position: absolute;
   width: 120%;
   left: -10%;
@@ -31,30 +31,31 @@
   border-bottom: 1px solid $grey_dark;
 }
 
-.borderBadge{
-  opacity: .85;
+.borderBadge {
+  opacity: 0.85;
   z-index: 10;
   position: absolute;
   width: 1.6rem;
-  height: .8rem;
-  bottom: -12%;
+  height: 0.8rem;
+  bottom: -14%;
   left: -10%;
   background-color: $gold;
   //border-radius: 10%;
   clip-path: polygon(100% 0%, 75% 50%, 100% 100%, 25% 100%, 0% 50%, 25% 0%);
 }
 
-.navbarLink{
+.navbarLink {
+  outline: none;
   cursor: pointer;
-  opacity: .85;
-  transition: transform .15s;
+  opacity: 0.85;
+  transition: transform 0.15s;
 
-  &:hover{
+  &:hover {
     opacity: 1;
     transform: scale(1.03);
   }
 
-  &:not(:first-child){
+  &:not(:first-child) {
     margin-left: 2rem;
   }
 }
@@ -63,27 +64,27 @@
 //KEYFRAMES
 //
 
-@keyframes bottomBorder{
-  from{
+@keyframes bottomBorder {
+  from {
     transform: scale(0);
   }
-  to{
+  to {
     transform: scale(1);
   }
 }
 
-@keyframes menuLinks{
-  from{
+@keyframes menuLinks {
+  from {
     transform: translate(0%, 30%);
     opacity: 0;
   }
-  to{
+  to {
     transform: translate(0%);
     opacity: 1;
   }
 }
 
-.router-link-active{
+.router-link-active {
   color: $gold;
   font-weight: 700;
   opacity: 1;
