@@ -1,12 +1,89 @@
 <div class="wrapper">
   <div class="menu d-flex">
-    <div class="navbarLink" [routerLink]="['/']" routerLinkActive="router-link-active"
-      [routerLinkActiveOptions]="{exact: true}">INICIO</div>
-    <div class="navbarLink" [routerLink]="['/projects']" routerLinkActive="router-link-active">PROYECTOS</div>
-    <div class="navbarLink">HABILIDADES</div>
+    <div
+      class="navbarLink"
+      [routerLink]="['/']"
+      routerLinkActive="router-link-active"
+      [routerLinkActiveOptions]="{ exact: true }"
+    >
+      INICIO
+    </div>
+    <div
+      class="navbarLink"
+      [routerLink]="['/projects']"
+      routerLinkActive="router-link-active"
+    >
+      PROYECTOS
+    </div>
+    <div
+      class="navbarLink"
+      [routerLink]="['/skills']"
+      routerLinkActive="router-link-active"
+    >
+      HABILIDADES
+    </div>
     <div class="navbarLink">CONTACTO</div>
   </div>
 
   <div class="borderBadge"></div>
   <div class="bottomBorder"></div>
+</div>
+
+<!-------------------------------------------------->
+<!-------------------------------------------------->
+<!--MOBILE MENU-->
+<!-------------------------------------------------->
+<!-------------------------------------------------->
+
+<div class="mobileMenuWrapper">
+  <div class="mobileMenuIcon" (click)="toggleDrawer()">
+    <fa-icon [icon]="faBars" size="2x"></fa-icon>
+  </div>
+
+  <div
+    class="backdrop"
+    (click)="toggleDrawer()"
+    [ngClass]="drawerOpen ? 'backdropShow' : 'backdropHide'"
+  ></div>
+
+  <div
+    class="sideDrawer"
+    [ngClass]="drawerOpen ? 'sideDrawerOpen' : 'sideDrawerClosed'"
+  >
+    <div class="drawerMenu">
+      <div
+        class="drawerMenuItem"
+        (click)="toggleDrawer()"
+        [routerLink]="['/']"
+        [routerLinkActiveOptions]="{ exact: true }"
+        routerLinkActive="router-link-active"
+      >
+        Inicio
+      </div>
+      <div
+        class="drawerMenuItem"
+        (click)="toggleDrawer()"
+        [routerLink]="['/projects']"
+        routerLinkActive="router-link-active"
+      >
+        Proyectos
+      </div>
+      <div
+        class="drawerMenuItem"
+        (click)="toggleDrawer()"
+        [routerLink]="['/skills']"
+        routerLinkActive="router-link-active"
+      >
+        Habilidades
+      </div>
+      <div
+        class="drawerMenuItem"
+        (click)="toggleDrawer()"
+        [routerLink]="['/contact']"
+        routerLinkActive="router-link-active"
+      >
+        Contacto
+      </div>
+    </div>
+  </div>
 </div>

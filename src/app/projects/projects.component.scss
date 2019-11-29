@@ -28,6 +28,11 @@
   transform: translate(-50%, -50%);
   width: 80%;
   height: 64%;
+
+  @media (max-width: 576px) {
+    height: 75%;
+    top: 54%;
+  }
 }
 
 .projectsBackgroundColor {
@@ -111,11 +116,17 @@
 .projectItem {
   cursor: pointer;
   width: 100%;
-  margin: 0 2rem;
   opacity: 0.75;
   color: $platinum;
-
   transition: transform 0.25s ease-out;
+
+  @media (min-width: 992px) {
+    margin: 0 1rem;
+  }
+
+  @media (min-width: 1200px) {
+    margin: 0 2rem;
+  }
 
   &:hover {
     opacity: 1;
@@ -137,6 +148,7 @@
   }
 
   &__footer {
+    white-space: nowrap;
     font-size: 0.75rem;
     padding: 0.6rem 0;
     background-color: rgba($black_light, 0.6);
@@ -144,14 +156,8 @@
 
   &__image {
     width: 100%;
+    //height: 200px;
   }
-}
-
-.techBadge {
-  background-color: $grey;
-  padding: 0.25rem;
-  border-radius: 15%;
-  font-size: 0.65rem;
 }
 
 //

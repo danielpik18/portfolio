@@ -1,0 +1,210 @@
+@import "./../../colors.scss";
+
+.originalViewWrapper {
+  display: none;
+}
+
+.organizedViewWrapper {
+  background-color: $grey_dark;
+  position: absolute;
+  color: $platinum;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 70%;
+
+  top: 12%;
+  left: 50%;
+
+  transform: translate(-50%, 0);
+}
+
+.skillsWrapper {
+  position: absolute;
+  color: $platinum;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 60%;
+
+  top: 12%;
+  left: 50%;
+
+  transform: translate(-50%, 0);
+  font-weight: 300;
+}
+
+.organizeButtons {
+  position: absolute;
+  top: 8%;
+  right: 12%;
+
+  & > * {
+    cursor: pointer;
+    color: $grey;
+
+    &:hover {
+      color: $platinum;
+    }
+  }
+}
+
+.bgVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  opacity: 0.15;
+}
+
+.skill {
+  position: relative;
+  font-family: "Montserrat", sans-serif;
+  cursor: default;
+  margin: 0 0.2rem;
+
+  &:hover {
+    color: $platinum;
+  }
+
+  animation-name: skillIntro;
+  animation-duration: 0.85s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: both;
+}
+
+.skillContainer {
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
+
+  @media (min-width: 768px) {
+    &:not(:last-child) {
+      margin-bottom: -3rem;
+    }
+  }
+}
+
+.javascript {
+  font-weight: 200;
+  letter-spacing: -0.4rem;
+  font-size: 7rem;
+  color: $yellow_light;
+}
+
+.angular {
+  font-size: 5rem;
+  color: $green_light;
+  letter-spacing: -0.4rem;
+  animation-delay: 0.25s;
+}
+
+.react {
+  color: $red_light;
+  font-size: 3.2rem;
+  letter-spacing: 0.4rem;
+  animation-delay: 0.35s;
+}
+
+.sass {
+  color: $pink;
+  font-size: 5rem;
+  animation-delay: 0.45s;
+}
+
+.html {
+  letter-spacing: -0.4rem;
+  font-size: 3.4rem;
+  animation-delay: 0.55s;
+}
+
+.css {
+  font-weight: 500;
+  font-size: 8rem;
+  color: $grey_light;
+  animation-delay: 0.15s;
+}
+
+.php {
+  color: $cyan;
+  font-size: 6.4rem;
+  font-weight: 700;
+  animation-delay: 0.65s;
+}
+
+.firebase {
+  font-size: 3rem;
+  color: $orange_light;
+  animation-delay: 0.75s;
+}
+
+.npm {
+  font-size: 7rem;
+  color: $green;
+  animation-delay: 0.85s;
+}
+
+.node {
+  color: $blue_light;
+  font-weight: 600;
+  font-size: 2rem;
+  animation-delay: 0.95s;
+}
+
+.express {
+  color: $pink;
+  font-size: 5rem;
+  font-weight: 200;
+  animation-delay: 1s;
+}
+
+.sql {
+  color: $platinum;
+  font-size: 6rem;
+  animation-delay: 1.05s;
+}
+
+.mongo {
+  font-size: 2rem;
+  color: $grey;
+  animation-delay: 1.15s;
+  font-weight: 500;
+}
+
+.git {
+  font-size: 1.4rem;
+  color: $yellow;
+  animation-delay: 1.25s;
+}
+
+.csharp {
+  font-size: 4rem;
+  animation-delay: 1.35s;
+  font-weight: 600;
+}
+
+.java {
+  font-size: 2.4rem;
+  color: $red_light;
+  animation-delay: 1.45s;
+}
+
+.uml {
+  animation-delay: 1.55s;
+  font-size: 2.2rem;
+  color: $grey_light;
+}
+
+@keyframes skillIntro {
+  from {
+    opacity: 0;
+    transform: translate(0, -15%);
+  }
+  to {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+}
