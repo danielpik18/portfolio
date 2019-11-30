@@ -15,29 +15,28 @@
       <div class="row">
         <div
           *ngFor="let project of projects"
-          class="col col-sm-12 col-md-6 col-lg-4 my-5"
+          class="col col-sm-12 col-md-6 col-lg-4 my-3 my-lg-5"
         >
           <a
             href="{{ project.link }}"
             target="_blank"
             style="text-decoration: none;"
+            class="projectItem"
           >
-            <div class="projectItem">
-              <div class="projectItem__header">
-                {{ project.title }}
-              </div>
+            <div class="projectItem__header">
+              {{ project.title }}
+            </div>
 
-              <div class="projectItem__body">
-                <img src="{{ project.imageUrl }}" class="projectItem__image" />
-              </div>
+            <div class="projectItem__body">
+              <img src="{{ project.imageUrl }}" class="projectItem__image" />
+            </div>
 
-              <div class="projectItem__footer">
-                <div class="d-flex">
-                  <span *ngFor="let tech of project.tech" class="mx-3">
-                    <i class="fa fa-arrows"></i>
-                    {{ tech.name }}
-                  </span>
-                </div>
+            <div class="projectItem__footer">
+              <div class="d-flex">
+                <span *ngFor="let tech of project.tech" class="mx-3">
+                  <fa-icon [icon]="tech.iconName" class="mr-1"></fa-icon>
+                  {{ tech.name }}
+                </span>
               </div>
             </div>
           </a>

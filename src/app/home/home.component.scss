@@ -1,30 +1,122 @@
-@import './../../colors.scss';
+@import "./../../colors.scss";
 
-.wrapper{
-  background-image: linear-gradient(to bottom, rgba($black_light, .98),rgba($black_light, .92)), url('./../../assets/coding-laptop.png');
+.wrapper {
+  background-image: linear-gradient(
+      to bottom,
+      rgba($black_light, 0.98),
+      rgba($black_light, 0.92)
+    ),
+    url("./../../assets/coding-laptop.png");
   background-size: cover;
   color: $platinum;
   height: 100vh;
 }
 
-.intro{
+.intro {
   position: absolute;
-  top: 36%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  padding-top: 2rem;
 
-  animation-name: intro;
-  animation-duration: 1.4s;
+  @media (max-width: 768px) {
+    width: 100%;
+  }
+
+  @media (min-width: 992px) {
+    padding-top: 0;
+    position: absolute;
+    top: 36%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.introText {
+  animation-name: introText;
+  animation-duration: 1.8s;
+  -moz-animation-timing-function: ease-in-out;
+
+  padding: 0 2rem;
+  padding-left: 2rem;
+}
+
+.helloWorld {
+  @media (max-width: 768px) {
+    font-size: 2.4rem;
+  }
+}
+
+.presentationText {
+  color: $grey;
+}
+
+.mePhoto {
+  width: 240px;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid $platinum;
+
+  animation-name: mePhoto;
+  animation-duration: 1.8s;
   -moz-animation-timing-function: ease-in-out;
 }
 
-@keyframes intro{
-  from{
-    opacity: 0;
-    transform: translate(-55%, -50%);
+.socialMediaIcons {
+  animation-name: socialMediaIcons;
+  animation-duration: 1.8s;
+  -moz-animation-timing-function: ease-in-out;
+
+  padding-left: 2rem;
+
+  @media (max-width: 992px) {
+    padding: 0 2rem;
   }
-  to{
+
+  @media (max-width: 576px) {
+    padding-bottom: 3rem;
+  }
+}
+
+.socialMediaIcon {
+  color: $gold;
+
+  &:not(:last-child) {
+    margin-right: 1rem;
+  }
+
+  &:hover {
+    color: $yellow_light;
+  }
+}
+
+@keyframes introText {
+  from {
+    opacity: 0;
+    transform: translate(0, -2%);
+  }
+  to {
     opacity: 1;
-    transform: translate(-50%, -50%);
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes mePhoto {
+  from {
+    opacity: 0;
+    transform: translate(-8%, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes socialMediaIcons {
+  from {
+    opacity: 0;
+    transform: translate(0, -10%);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0, 0);
   }
 }

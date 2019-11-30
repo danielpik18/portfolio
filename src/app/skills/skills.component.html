@@ -1,0 +1,81 @@
+<div class="wrapper">
+  <video
+    src="./../../assets/codingvid.mp4"
+    autoplay
+    loop
+    class="bgVideo"
+  ></video>
+
+  <div class="organizeButtons">
+    <fa-icon [icon]="faColumns" size="lg" class="mr-3"></fa-icon>
+    <fa-icon [icon]="faListUl" size="lg"></fa-icon>
+  </div>
+
+  <div class="originalViewWrapper">
+    <div class="skillsWrapper">
+      <div class="skills">
+        <div class="d-flex align-items-center skillContainer">
+          <div class="javascript skill">
+            Javascript
+          </div>
+          <div class="css skill">CSS</div>
+        </div>
+
+        <div class="d-flex align-items-center skillContainer">
+          <div class="angular skill">Angular 2</div>
+          <div class="react skill">React</div>
+          <div class="sass skill">SASS</div>
+        </div>
+
+        <div class="d-flex align-items-center skillContainer">
+          <div class="html skill">HTML</div>
+          <div class="php skill">PHP</div>
+          <div class="firebase skill">Firebase</div>
+          <div class="npm skill">NPM</div>
+        </div>
+
+        <div class="d-flex align-items-center skillContainer">
+          <div class="node skill">Node JS</div>
+          <div class="express skill">Express</div>
+          <div class="sql skill">SQL</div>
+          <div class="mongo skill">mongoDB</div>
+        </div>
+
+        <div class="d-flex align-items-center skillContainer">
+          <div class="git skill">Git/github</div>
+          <div class="csharp skill">C#</div>
+          <div class="java skill">Java</div>
+          <div class="uml skill">UML</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="organizedViewWrapper">
+  <div class="row" style="width: 100%;">
+    <div class="col-md-4">
+      <div class="d-flex flex-column align-items-center">
+        <h6>Lenguajes generales</h6>
+        <div *ngFor="let skill of skills.general">
+          {{ skill }}
+        </div>
+      </div>
+
+      <div class="my-5 d-flex flex-column align-items-center">
+        <h6>Web básicos</h6>
+        <div *ngFor="let skill of skills.webBasic">
+          {{ skill }}
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      col2
+    </div>
+
+    <div class="col-md-4">
+      col3
+    </div>
+  </div>
+</div>
