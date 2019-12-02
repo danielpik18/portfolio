@@ -1,6 +1,13 @@
 @import "./../../colors.scss";
 
 .wrapper {
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
   background-image: linear-gradient(
       to bottom,
       rgba($black_light, 0.98),
@@ -8,24 +15,40 @@
     ),
     url("./../../assets/coding-laptop.png");
   background-size: cover;
+
   color: $platinum;
-  height: 100vh;
+  font-family: "Quicksand", sans-serif;
+}
+
+.colorWall{
+  position: absolute;
+  background-color: $blue_light;
+  width: 100%;
+  height: 100%;
+  clip-path: polygon(50% 48%, 100% 68%, 100% 100%, 50% 100%, 0 100%, 0 31%);
+
+  animation-name: colorWall;
+  animation-duration: 2.6s;
+  animation-delay: .3s;
+  animation-fill-mode: both;
+  -moz-animation-timing-function: ease-in-out;
 }
 
 .intro {
-  position: absolute;
-  padding-top: 2rem;
+  z-index: 15;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
     width: 100%;
+    padding: 0 2rem;
   }
 
-  @media (min-width: 992px) {
-    padding-top: 0;
-    position: absolute;
-    top: 36%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  @media (min-width: 768px) {
+    margin-bottom: 7rem;
   }
 }
 
@@ -34,13 +57,30 @@
   animation-duration: 1.8s;
   -moz-animation-timing-function: ease-in-out;
 
-  padding: 0 2rem;
-  padding-left: 2rem;
+  @media (min-width: 768px) {
+    width: 50%;
+  }
 }
 
 .helloWorld {
+  font-weight: 500;
+  font-size: 2.4rem;
+
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: .12em solid $blue_light; /* The typwriter cursor */
+
   @media (max-width: 768px) {
-    font-size: 2.4rem;
+    font-size: 2rem;
+    animation:
+    typing2 1.8s steps(28, end),
+    blink-caret .75s step-end infinite;
+  }
+
+  @media (min-width: 768px) {
+    animation:
+    typing 1.8s steps(28, end),
+    blink-caret .75s step-end infinite;
   }
 }
 
@@ -49,11 +89,16 @@
 }
 
 .mePhoto {
-  width: 240px;
-  height: 240px;
-  object-fit: cover;
+  width: 200px;
+  height: 200px;
+  background-image: url('./../../assets/me.jpg');
+  background-size: cover;
+  background-position: center;
+  //padding-top: 240px;
+  //object-fit: cover;
   border-radius: 50%;
   border: 2px solid $platinum;
+  margin-right: 2rem;
 
   animation-name: mePhoto;
   animation-duration: 1.8s;
@@ -61,23 +106,31 @@
 }
 
 .socialMediaIcons {
-  animation-name: socialMediaIcons;
-  animation-duration: 1.8s;
-  -moz-animation-timing-function: ease-in-out;
-
-  padding-left: 2rem;
+  @media (min-width: 992px) {
+    //position: absolute;
+  }
 
   @media (max-width: 992px) {
-    padding: 0 2rem;
+    //padding: 0 2rem;
   }
 
   @media (max-width: 576px) {
-    padding-bottom: 3rem;
+    //margin-bottom: 3rem;
   }
+
+
 }
 
 .socialMediaIcon {
   color: $gold;
+  animation-name: bounceIn;
+  animation-duration: 1s;
+  -moz-animation-timing-function: ease-out;
+  animation-fill-mode: both;
+
+  &:nth-child(2){
+    animation-delay: .35s;
+  }
 
   &:not(:last-child) {
     margin-right: 1rem;
@@ -85,6 +138,17 @@
 
   &:hover {
     color: $yellow_light;
+  }
+}
+
+@keyframes colorWall {
+  from {
+    opacity: 0;
+    transform: translate(0, 2%);
+  }
+  to {
+    opacity: .085;
+    transform: translate(0, 0);
   }
 }
 
@@ -118,5 +182,47 @@
   to {
     opacity: 1;
     transform: translate(0, 0);
+  }
+}
+
+@keyframes typing {
+  from {
+      width: 0%
+  }
+  to {
+      width: 19rem;
+  }
+}
+
+@keyframes typing2 {
+  from {
+      width: 0%
+  }
+  to {
+      width: 16rem;
+  }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: $blue_light; }
+}
+
+@keyframes bounceIn{
+  0%{
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  50%{
+    opacity: 0.9;
+    transform: scale(1.25);
+  }
+  80%{
+    opacity: 1;
+    transform: scale(0.96);
+  }
+  100%{
+    opacity: 1;
+    transform: scale(1);
   }
 }

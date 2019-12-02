@@ -1,23 +1,91 @@
 @import "./../../colors.scss";
 
-.originalViewWrapper {
-  display: none;
+.originalViewWrapper, .organizeButtons {
+  @media (max-width: 992px) {
+    display: none;
+  }
 }
 
 .organizedViewWrapper {
-  background-color: $grey_dark;
+  font-family: "Quicksand", sans-serif;
   position: absolute;
   color: $platinum;
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
 
-  width: 70%;
+  @media (min-width: 992px) {
+    width: 70%;
+  }
 
   top: 12%;
   left: 50%;
 
   transform: translate(-50%, 0);
+}
+
+.col-12 > *{
+  padding: .4rem 1rem;
+  border-radius: 2%;
+}
+
+.general {
+  animation-name: skillListIntro;
+  animation-duration: 0.9s;
+  animation-timing-function: ease-in-out;
+
+  background: linear-gradient(rgba($blue, .3), rgba($blue_light, .2));
+}
+
+.webBasic{
+  animation-name: skillListIntro;
+  animation-duration: 0.9s;
+  animation-delay: .35s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: both;
+
+  background: linear-gradient(rgba($red, .3), rgba($red_light, .2));
+}
+
+.frontEnd{
+  animation-name: skillListIntro;
+  animation-duration: 0.9s;
+  animation-delay: .15s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: both;
+
+  background: linear-gradient(rgba($cyan, .3), rgba($cyan, .2));
+}
+
+.backEnd{
+  animation-name: skillListIntro;
+  animation-duration: 0.9s;
+  animation-delay: .45s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: both;
+
+  background: linear-gradient(rgba($pink, .3), rgba($pink_light, .2));
+}
+
+.databases{
+  animation-name: skillListIntro;
+  animation-duration: 0.9s;
+  animation-delay: .25s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: both;
+
+  background: linear-gradient(rgba($green, .3), rgba($green_light, .2));
+}
+
+.other{
+  animation-name: skillListIntro;
+  animation-duration: 0.9s;
+  animation-delay: .55s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: both;
+
+  background: linear-gradient(rgba($grey, .3), rgba($grey_light, .2));
 }
 
 .skillsWrapper {
@@ -29,8 +97,12 @@
 
   width: 60%;
 
-  top: 12%;
+  top: 0%;
   left: 50%;
+  @media (min-width: 1600px) {
+
+    top: 12%;
+  }
 
   transform: translate(-50%, 0);
   font-weight: 300;
@@ -38,8 +110,8 @@
 
 .organizeButtons {
   position: absolute;
-  top: 8%;
-  right: 12%;
+  top: 6%;
+  right: 8%;
 
   & > * {
     cursor: pointer;
@@ -57,12 +129,12 @@
   bottom: 0;
   min-width: 100%;
   min-height: 100%;
-  opacity: 0.15;
+  opacity: .15;
 }
 
 .skill {
   position: relative;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Quicksand", sans-serif;
   cursor: default;
   margin: 0 0.2rem;
 
@@ -97,6 +169,7 @@
 
 .angular {
   font-size: 5rem;
+  font-weight: 200;
   color: $green_light;
   letter-spacing: -0.4rem;
   animation-delay: 0.25s;
@@ -105,6 +178,7 @@
 .react {
   color: $red_light;
   font-size: 3.2rem;
+  font-weight: 600;
   letter-spacing: 0.4rem;
   animation-delay: 0.35s;
 }
@@ -136,13 +210,15 @@
 }
 
 .firebase {
+  font-weight: 200;
   font-size: 3rem;
   color: $orange_light;
   animation-delay: 0.75s;
 }
 
 .npm {
-  font-size: 7rem;
+  font-weight: 400;
+  font-size: 6.6rem;
   color: $green;
   animation-delay: 0.85s;
 }
@@ -168,15 +244,18 @@
 }
 
 .mongo {
+  letter-spacing: .25rem;
   font-size: 2rem;
   color: $grey;
   animation-delay: 1.15s;
-  font-weight: 500;
+  font-weight: 400;
 }
 
 .git {
+  font-weight: 500;
+  letter-spacing: .25rem;
   font-size: 1.4rem;
-  color: $yellow;
+  color: $yellow_light;
   animation-delay: 1.25s;
 }
 
@@ -193,8 +272,10 @@
 }
 
 .uml {
+  font-weight: 400;
+  letter-spacing: .35rem;
   animation-delay: 1.55s;
-  font-size: 2.2rem;
+  font-size: 1.2rem;
   color: $grey_light;
 }
 
@@ -202,6 +283,17 @@
   from {
     opacity: 0;
     transform: translate(0, -15%);
+  }
+  to {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+}
+
+@keyframes skillListIntro {
+  from {
+    opacity: 0;
+    transform: translate(0, 8%);
   }
   to {
     transform: translate(0, 0);

@@ -3,13 +3,14 @@
 .wrapper {
   background: linear-gradient(
     to bottom,
-    rgba($black_light, 0.98),
-    rgba($black_light, 0.92)
+    rgba($black, 0.98),
+    rgba($black, 0.92)
   );
   background-size: cover;
   color: $platinum;
   height: 100vh;
   max-height: 100vh;
+  font-family: 'Quicksand', 'sans-serif';
 }
 
 .bgVideo {
@@ -26,8 +27,12 @@
   top: 48%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 80%;
+  width: 88%;
   height: 64%;
+
+  @media (min-width: 992px) {
+    width: 80%;
+  }
 
   @media (max-width: 576px) {
     height: 75%;
@@ -38,7 +43,7 @@
 .projectsBackgroundColor {
   width: 100%;
   height: 100%;
-  background: linear-gradient($grey, rgba($grey_dark, 0.15));
+  background: linear-gradient(rgba($blue_light, .6), rgba($blue, 0.15));
   color: $black_light;
 
   animation-name: opacityFill;
@@ -105,7 +110,11 @@
 .projectsTitle {
   position: absolute;
   top: 4%;
-  left: 9.8%;
+  left: 6%;
+
+  @media (min-width: 992px) {
+    left: 9.8%;
+  }
 
   animation-name: projectsTitle;
   animation-delay: 0.15s;
@@ -130,10 +139,6 @@
     margin: 0 1rem;
   }
 
-  @media (min-width: 1200px) {
-    margin: 0 2rem;
-  }
-
   &:hover {
     opacity: 1;
     transform: scale(1.01);
@@ -141,12 +146,12 @@
 
   &__header {
     background: linear-gradient(
-      to right,
-      $black_light,
-      rgba($black_light, 0.85)
+      75deg,
+      rgba($black_light, .75),
+      rgba($black_light, 0.65)
     );
-    font-weight: 600;
-    padding: 0.5rem 1rem;
+    font-weight: 500;
+    padding: 0.2rem .8rem;
   }
 
   &__body {
@@ -154,15 +159,20 @@
   }
 
   &__footer {
+    transform: translate(0, -100%);
     white-space: nowrap;
-    font-size: 0.75rem;
-    padding: 0.6rem 0;
-    background-color: rgba($black_light, 0.6);
+    font-size: 0.64rem;
+    font-weight: 600;
+    padding: 0.3rem 0;
+    background: linear-gradient(rgba($grey, .25), rgba($grey_light, 0.15));
+
+      &:not(fa-icon){
+        //color: $black_light;
+      }
   }
 
   &__image {
     width: 100%;
-    //height: 200px;
   }
 }
 

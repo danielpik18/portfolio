@@ -43,7 +43,7 @@
   height: 0.8rem;
   bottom: -14%;
   left: -10%;
-  background-color: $gold;
+  background: linear-gradient(180deg, $grey_light, $grey_dark);
   //border-radius: 10%;
   clip-path: polygon(100% 0%, 75% 50%, 100% 100%, 25% 100%, 0% 50%, 25% 0%);
 }
@@ -99,6 +99,8 @@
 //----------------------------------------------------------
 
 .mobileMenuWrapper {
+  font-family: 'Sulphur Point';
+
   @media (min-width: 768px) {
     display: none;
   }
@@ -133,7 +135,7 @@
   position: fixed;
   width: 75%;
   height: 100vh;
-  border-right: 1px solid $platinum;
+  border-right: 1px solid $grey_dark;
 
   background: linear-gradient(rgba($blue_dark, 0.75), rgba($blue_dark, 0.85)),
     url("./../../assets/techWallpaper.png");

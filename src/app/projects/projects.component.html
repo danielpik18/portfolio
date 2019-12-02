@@ -1,10 +1,5 @@
 <div class="wrapper">
-  <video
-    src="./../../assets/Blurred Video of Scripts Being Typed.mp4"
-    autoplay
-    loop
-    class="bgVideo"
-  ></video>
+  <video src="./../../assets/Blurred Video of Scripts Being Typed.mp4" autoplay loop class="bgVideo"></video>
   <span class="display-4 projectsTitle">Proyectos</span>
   <div class="projectsWrapper">
     <div class="borderHorizontal"></div>
@@ -13,16 +8,8 @@
 
     <div class="projectsList">
       <div class="row">
-        <div
-          *ngFor="let project of projects"
-          class="col col-sm-12 col-md-6 col-lg-4 my-3 my-lg-5"
-        >
-          <a
-            href="{{ project.link }}"
-            target="_blank"
-            style="text-decoration: none;"
-            class="projectItem"
-          >
+        <div *ngFor="let project of projects" class="col col-sm-12 col-md-6 col-lg-4 my-3 my-lg-4">
+          <a href="{{ project.link }}" target="_blank" style="text-decoration: none;" class="projectItem">
             <div class="projectItem__header">
               {{ project.title }}
             </div>

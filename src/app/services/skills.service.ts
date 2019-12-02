@@ -4,14 +4,14 @@ import { Injectable } from "@angular/core";
   providedIn: "root"
 })
 export class SkillsService {
-  constructor() {}
+  constructor() { }
 
   getSkills() {
     const skills = {
       general: ["Java", "C#"],
-      webBasic: ["HTML5", "CSS"],
-      frontEnd: ["Javascript", "Angular 2", "React", "Sass"],
-      backEnd: ["PHP", "NodeJS"],
+      webBasic: ["HTML5", "CSS", "Sass"],
+      frontEnd: ["Javascript", "Angular 2", "React"],
+      backEnd: ["PHP", "NodeJS", "Express"],
       databases: ["Mysql", "SQL server", "PL/SQL", "MongoDB"],
       other: ["Git", "Github", "Diagramas UML", "Photoshop"]
     };
