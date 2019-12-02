@@ -1,16 +1,34 @@
 <div class="wrapper">
   <div class="menu d-flex">
-    <div class="navbarLink" [routerLink]="['/']" routerLinkActive="router-link-active"
-      [routerLinkActiveOptions]="{ exact: true }">
+    <div
+      class="navbarLink"
+      [routerLink]="['/']"
+      routerLinkActive="router-link-active"
+      [routerLinkActiveOptions]="{ exact: true }"
+    >
       Inicio
     </div>
-    <div class="navbarLink" [routerLink]="['/projects']" routerLinkActive="router-link-active">
+    <div
+      class="navbarLink"
+      [routerLink]="['/projects']"
+      routerLinkActive="router-link-active"
+    >
       Proyectos
     </div>
-    <div class="navbarLink" [routerLink]="['/skills']" routerLinkActive="router-link-active">
+    <div
+      class="navbarLink"
+      [routerLink]="['/skills']"
+      routerLinkActive="router-link-active"
+    >
       Habilidades
     </div>
-    <div class="navbarLink">Contacto</div>
+    <div
+      class="navbarLink"
+      [routerLink]="['/contact']"
+      routerLinkActive="router-link-active"
+    >
+      Contacto
+    </div>
   </div>
 
   <div class="borderBadge"></div>
@@ -28,24 +46,48 @@
     <fa-icon [icon]="faBars" size="2x"></fa-icon>
   </div>
 
-  <div class="backdrop" (click)="toggleDrawer()" [ngClass]="drawerOpen ? 'backdropShow' : 'backdropHide'"></div>
+  <div
+    class="backdrop"
+    (click)="toggleDrawer()"
+    [ngClass]="drawerOpen ? 'backdropShow' : 'backdropHide'"
+  ></div>
 
-  <div class="sideDrawer" [ngClass]="drawerOpen ? 'sideDrawerOpen' : 'sideDrawerClosed'">
+  <div
+    class="sideDrawer"
+    [ngClass]="drawerOpen ? 'sideDrawerOpen' : 'sideDrawerClosed'"
+  >
     <div class="drawerMenu">
-      <div class="drawerMenuItem" (click)="toggleDrawer()" [routerLink]="['/']"
-        [routerLinkActiveOptions]="{ exact: true }" routerLinkActive="router-link-active">
+      <div
+        class="drawerMenuItem"
+        (click)="toggleDrawer()"
+        [routerLink]="['/']"
+        [routerLinkActiveOptions]="{ exact: true }"
+        routerLinkActive="router-link-active"
+      >
         Inicio
       </div>
-      <div class="drawerMenuItem" (click)="toggleDrawer()" [routerLink]="['/projects']"
-        routerLinkActive="router-link-active">
+      <div
+        class="drawerMenuItem"
+        (click)="toggleDrawer()"
+        [routerLink]="['/projects']"
+        routerLinkActive="router-link-active"
+      >
         Proyectos
       </div>
-      <div class="drawerMenuItem" (click)="toggleDrawer()" [routerLink]="['/skills']"
-        routerLinkActive="router-link-active">
+      <div
+        class="drawerMenuItem"
+        (click)="toggleDrawer()"
+        [routerLink]="['/skills']"
+        routerLinkActive="router-link-active"
+      >
         Habilidades
       </div>
-      <div class="drawerMenuItem" (click)="toggleDrawer()" [routerLink]="['/contact']"
-        routerLinkActive="router-link-active">
+      <div
+        class="drawerMenuItem"
+        (click)="toggleDrawer()"
+        [routerLink]="['/contact']"
+        routerLinkActive="router-link-active"
+      >
         Contacto
       </div>
     </div>
