@@ -1,9 +1,17 @@
 <div class="wrapper">
-  <video src="./../../assets/codingvid.mp4" autoplay loop class="bgVideo"></video>
+  <video src="assets/codingvid.mp4" autoplay loop class="bgVideo"></video>
 
   <div class="organizeButtons">
-    <fa-icon [icon]="faColumns" size="lg" class="mr-3" (click)="currentView = 0"></fa-icon>
-    <fa-icon [icon]="faListUl" size="lg" (click)="currentView = 1"></fa-icon>
+    <i
+      class="fa fa-columns mr-3"
+      style="font-size: 1.2rem;"
+      (click)="currentView = 0"
+    ></i>
+    <i
+      class="fa fa-list-ul mr-3"
+      style="font-size: 1.2rem;"
+      (click)="currentView = 1"
+    ></i>
   </div>
 
   <div *ngIf="currentView === 0" class="originalViewWrapper">
@@ -52,7 +60,7 @@
     <div class="col-12 col-md-4">
       <div class="d-flex flex-column general">
         <h6 style="font-weight: 600">
-          <fa-icon [icon]="faLayerGroup" class="mr-1"></fa-icon>
+          <i class="mr-1 fa fa-layer-group"></i>
           Lenguajes generales
         </h6>
 
@@ -63,7 +71,7 @@
 
       <div class="my-5 d-flex flex-column webBasic">
         <h6 style="font-weight: 600">
-          <fa-icon [icon]="faGlobe" class="mr-1"></fa-icon>
+          <i class="mr-1 fa fa-globe"></i>
           Web básicos
         </h6>
         <div *ngFor="let skill of skills.webBasic">
@@ -75,7 +83,7 @@
     <div class="col-12 col-md-4">
       <div class="d-flex flex-column frontEnd">
         <h6 style="font-weight: 600">
-          <fa-icon [icon]="faJsSquare" class="mr-1"></fa-icon>
+          <i class="mr-1 fab fa-js-square"></i>
           Front-end
         </h6>
         <div *ngFor="let skill of skills.frontEnd">
@@ -85,7 +93,7 @@
 
       <div class="my-5 d-flex flex-column backEnd">
         <h6 style="font-weight: 600">
-          <fa-icon [icon]="faServer" class="mr-1"></fa-icon>
+          <i class="mr-1 fa fa-server"></i>
           Back-end
         </h6>
         <div *ngFor="let skill of skills.backEnd">
@@ -97,7 +105,7 @@
     <div class="col-12 col-md-4">
       <div class="d-flex flex-column databases">
         <h6 style="font-weight: 600">
-          <fa-icon [icon]="faDatabase" class="mr-1"></fa-icon>
+          <i class="mr-1 fa fa-database"></i>
           Bases de datos
         </h6>
         <div *ngFor="let skill of skills.databases">
@@ -107,7 +115,7 @@
 
       <div class="my-5 d-flex flex-column other">
         <h6 style="font-weight: 600">
-          <fa-icon [icon]="faCubes" class="mr-1"></fa-icon>
+          <i class="mr-1 fa fa-cubes"></i>
           Otros
         </h6>
         <div *ngFor="let skill of skills.other">

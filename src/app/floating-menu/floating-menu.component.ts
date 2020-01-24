@@ -1,5 +1,4 @@
 import { Component, OnInit, ViewChild, ElementRef } from "@angular/core";
-import { faBars } from "@fortawesome/free-solid-svg-icons";
 
 @Component({
   selector: "app-floating-menu",
@@ -7,7 +6,6 @@ import { faBars } from "@fortawesome/free-solid-svg-icons";
   styleUrls: ["./floating-menu.component.scss"]
 })
 export class FloatingMenuComponent implements OnInit {
-  faBars = faBars;
   drawerOpen: boolean;
 
   constructor() {}
