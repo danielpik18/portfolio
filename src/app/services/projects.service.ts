@@ -1,6 +1,4 @@
 import { Injectable } from "@angular/core";
-import { faAngular, faSass, faReact } from "@fortawesome/free-brands-svg-icons";
-import { faDatabase } from "@fortawesome/free-solid-svg-icons";
 
 @Injectable({
   providedIn: "root"
@@ -12,30 +10,38 @@ export class ProjectsService {
     const projects = [
       {
         title: "CloePMS",
-        imageUrl: "./../../assets/cloeLogo.jpg",
+        imageUrl: "assets/cloeLogo.jpg",
         tech: [
           {
             name: "Angular",
-            iconName: faAngular
+            iconName: "fab fa-angular"
           },
           {
             name: "Sass",
-            iconName: faSass
+            iconName: "fab fa-sass"
+          },
+          {
+            name: "Bootstrap",
+            iconName: "fab fa-bootstrap"
           }
         ],
         link: "http://www.getcloe.com"
       },
       {
         title: "Social Dev",
-        imageUrl: "./../../assets/social-dev.jpg",
+        imageUrl: "assets/social-dev.jpg",
         tech: [
           {
             name: "React JS",
-            iconName: faReact
+            iconName: "fab fa-react"
           },
           {
             name: "Firebase",
-            iconName: faDatabase
+            iconName: "fa fa-database"
+          },
+          {
+            name: "Bootstrap",
+            iconName: "fab fa-bootstrap"
           }
         ],
         link: "https://danielpik18.github.io/social-dev"

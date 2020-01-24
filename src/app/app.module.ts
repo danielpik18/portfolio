@@ -1,8 +1,6 @@
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
-
 import { AppRoutingModule } from "./app-routing.module";
-import { FontAwesomeModule } from "@fortawesome/angular-fontawesome";
 import { AppComponent } from "./app.component";
 import { FloatingMenuComponent } from "./floating-menu/floating-menu.component";
 import { HomeComponent } from "./home/home.component";
@@ -21,7 +19,7 @@ import { SkillsService } from "./services/skills.service";
     SkillsComponent,
     ContactComponent
   ],
-  imports: [BrowserModule, AppRoutingModule, FontAwesomeModule],
+  imports: [BrowserModule, AppRoutingModule],
   providers: [ProjectsService, SkillsService],
   bootstrap: [AppComponent]
 })
