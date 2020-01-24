@@ -1,5 +1,10 @@
 <div class="wrapper">
-  <video src="./../../assets/Blurred Video of Scripts Being Typed.mp4" autoplay loop class="bgVideo"></video>
+  <video
+    src="assets/Blurred Video of Scripts Being Typed.mp4"
+    autoplay
+    loop
+    class="bgVideo"
+  ></video>
   <span class="display-4 projectsTitle">Proyectos</span>
   <div class="projectsWrapper">
     <div class="borderHorizontal"></div>
@@ -8,8 +13,16 @@
 
     <div class="projectsList">
       <div class="row">
-        <div *ngFor="let project of projects" class="col col-sm-12 col-md-6 col-lg-4 my-3 my-lg-4">
-          <a href="{{ project.link }}" target="_blank" style="text-decoration: none;" class="projectItem">
+        <div
+          *ngFor="let project of projects"
+          class="col col-sm-12 col-md-6 col-lg-4 my-3 my-lg-4"
+        >
+          <a
+            href="{{ project.link }}"
+            target="_blank"
+            style="text-decoration: none;"
+            class="projectItem"
+          >
             <div class="projectItem__header">
               {{ project.title }}
             </div>
@@ -21,7 +34,7 @@
             <div class="projectItem__footer">
               <div class="d-flex">
                 <span *ngFor="let tech of project.tech" class="mx-3">
-                  <fa-icon [icon]="tech.iconName" class="mr-1"></fa-icon>
+                  <i class="mr-1 {{ tech.iconName }} fa-lg"></i>
                   {{ tech.name }}
                 </span>
               </div>
