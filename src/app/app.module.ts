@@ -9,6 +9,7 @@ import { SkillsComponent } from "./skills/skills.component";
 import { ContactComponent } from "./contact/contact.component";
 import { ProjectsService } from "./services/projects.service";
 import { SkillsService } from "./services/skills.service";
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,11 @@ import { SkillsService } from "./services/skills.service";
     SkillsComponent,
     ContactComponent
   ],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    CommonModule
+  ],
   providers: [ProjectsService, SkillsService],
   bootstrap: [AppComponent]
 })

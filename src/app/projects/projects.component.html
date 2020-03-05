@@ -1,6 +1,6 @@
 <div class="wrapper">
   <video
-    src="assets/Blurred Video of Scripts Being Typed.mp4"
+    src="assets/videos/Blurred Video of Scripts Being Typed.mp4"
     autoplay
     loop
     class="bgVideo"
@@ -15,7 +15,7 @@
       <div class="row">
         <div
           *ngFor="let project of projects"
-          class="col col-sm-12 col-md-6 col-lg-4 my-3 my-lg-4"
+          class="col col-sm-12 col-md-6 col-lg-3 my-3 my-lg-4"
         >
           <a
             href="{{ project.link }}"
@@ -32,12 +32,10 @@
             </div>
 
             <div class="projectItem__footer">
-              <div class="d-flex">
-                <span *ngFor="let tech of project.tech" class="mx-3">
-                  <i class="mr-1 {{ tech.iconName }} fa-lg"></i>
-                  {{ tech.name }}
-                </span>
-              </div>
+              <span *ngFor="let tech of project.tech" class="mx-3">
+                <i class="mr-1 {{ tech.iconName }} fa-lg"></i>
+                {{ tech.name }}
+              </span>
             </div>
           </a>
         </div>
