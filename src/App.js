@@ -12,13 +12,13 @@ function App() {
                 <Navbar />
 
                 <Routes>
-                    <Route path="/" element={<AboutMe />} />
+                    <Route path="/about-me" element={<AboutMe />} />
 
                     <Route path="/projects" element={<Projects />} />
 
                     <Route path="/contact" element={<Contact />} />
 
-                    <Route path="*" element={<div>not found</div>} />
+                    <Route path="*" element={<AboutMe />} />
                 </Routes>
             </section>
         </div>
