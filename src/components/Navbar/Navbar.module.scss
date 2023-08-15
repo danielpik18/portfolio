@@ -1,0 +1,76 @@
+.navbar {
+    position: fixed;
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    background-color: var(--lavender-blush);
+    border-top: 1px solid var(--ash-gray);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 85px;
+    z-index: 1000;
+}
+.navbar ul {
+    display: flex;
+    padding: 0;
+    list-style-type: none;
+    gap: 60px;
+    margin: 0;
+}
+
+.navbar ul li a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: var(--p);
+    font-size: 16px;
+    font-weight: 700;
+    transition: all 0.1s ease-in-out;
+}
+
+.navbar ul li img {
+    width: 20px;
+}
+
+.navbar__linkActive {
+    opacity: 1 !important;
+    transform: scale(1.1) !important;
+    text-decoration: underline !important;
+    color: var(--raisin-black) !important;
+}
+
+.navbar ul li a:not(:hover) {
+    opacity: 0.4;
+}
+
+.navbar ul li a:hover {
+    transform: scale(1.1);
+}
+
+@media screen and (max-width: 680px) {
+    .navbar {
+        padding: 10px 0;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .navbar ul {
+        gap: 30px;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .navbar ul {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .navbar ul li a {
+        font-size: 12px;
+    }
+}

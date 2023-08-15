@@ -1,0 +1,35 @@
+.contact:global {
+    width: 100%;
+    max-width: 400px;
+    animation: slide-right 0.85s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+
+    & > h1 {
+        text-align: left;
+    }
+}
+
+.contact__items {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 40px;
+    background-color: var(--lavender-blush);
+    border: 1px dashed var(--lavender-blush);
+    border-radius: 16px;
+    padding: 20px;
+    width: 100%;
+}
+
+.contact__item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.contact__item a {
+    color: var(--cambridge-blue);
+}
+
+.contact__item img {
+    width: 30px;
+}

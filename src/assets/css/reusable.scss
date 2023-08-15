@@ -1,0 +1,20 @@
+.separator {
+    margin: 20px 0;
+    width: 200px;
+    height: 3px;
+    background-color: var(--ash-gray);
+}
+
+.title {
+    font-weight: 600;
+    font-size: 38px;
+    letter-spacing: 0.03px;
+    line-height: 30px;
+}
+
+@media screen and (max-width: 680px) {
+    .title {
+        font-size: 30px;
+        line-height: 34px;
+    }
+}
