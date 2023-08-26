@@ -4,22 +4,29 @@ import Navbar from "./components/Navbar/Navbar";
 import AboutMe from "./pages/AboutMe/AboutMe";
 import Projects from "pages/Projects/Projects";
 import Contact from "pages/Contact/Contact";
+import video from "./assets/coding.mp4";
 
 function App() {
     return (
         <div className="App">
             <section className="App-content">
+                <video id="bgVideo" autoPlay loop>
+                    <source src={video} type="video/mp4"></source>
+                </video>
+
                 <Navbar />
 
-                <Routes>
-                    <Route path="/about-me" element={<AboutMe />} />
+                <div style={{ zIndex: "100" }}>
+                    <Routes>
+                        <Route path="/" element={<AboutMe />} />
 
-                    <Route path="/projects" element={<Projects />} />
+                        <Route path="/projects" element={<Projects />} />
 
-                    <Route path="/contact" element={<Contact />} />
+                        <Route path="/contact" element={<Contact />} />
 
-                    <Route path="*" element={<AboutMe />} />
-                </Routes>
+                        <Route path="*" element={<AboutMe />} />
+                    </Routes>
+                </div>
             </section>
         </div>
     );

@@ -2,9 +2,14 @@
     cursor: pointer;
     transition: all 0.1s ease-in-out;
     text-decoration: none;
+    min-height: 142px;
+    height: 100%;
+    border-radius: 8px;
+    padding: 0;
+    outline: none;
 
     &:hover {
-        transform: translateY(-5px);
+        transform: translateY(-5px) scale(1.025);
     }
 }
 
@@ -12,15 +17,18 @@
     display: grid;
     grid-template-columns: 150px 1fr;
     align-items: flex-start;
-    gap: 20px;
+    height: 100%;
 }
 
 .projectItem__text {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     gap: 10px;
     text-align: left;
     max-width: 700px;
+    height: 100%;
+    padding: 15px 20px;
 }
 
 .projectItem__text h2 {
@@ -36,11 +44,13 @@
 
 .projectItem__image {
     width: 100%;
-    height: 120px;
+    height: 100%;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
     border-radius: 8px;
+    margin: auto;
+    max-height: 120px;
 }
 
 .projectItem_tech {
@@ -53,7 +63,7 @@
 }
 
 .projectItem_tech li {
-    font-size: 10px;
+    font-size: 11px;
     font-weight: 600;
     color: var(--cambridge-blue);
 }

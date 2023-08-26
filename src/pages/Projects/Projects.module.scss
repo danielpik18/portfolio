@@ -13,6 +13,7 @@
     padding: 0 20px;
     gap: 40px;
     max-height: 340px;
+    overflow-x: hidden;
 }
 
 @media screen and (min-height: 900px) {
@@ -29,13 +30,14 @@
     .projects__list {
         grid-template-columns: 1fr;
         padding: 0 0 40px 0;
+        overflow-y: scroll;
     }
 }
 
 @media screen and (max-width: 680px) {
     .projects__list {
-        overflow-y: scroll;
-        max-height: 350px;
+        max-height: 450px;
+        margin-top: 20px;
     }
     .projects h1 {
         font-size: 28px;

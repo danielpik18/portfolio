@@ -5,6 +5,26 @@ import Project from "components/Project/Project";
 const Projects = () => {
     const projects = [
         {
+            url: "https://tasks-app-self.vercel.app",
+            image_path: "tasks-app-screenshot.png",
+            title: "Tasks.",
+            description: "A simple app for organizing your own tasks.",
+            tech: [
+                {
+                    icon_path: "",
+                    name: "NextJS",
+                },
+                {
+                    icon_path: "",
+                    name: "Firebase",
+                },
+                {
+                    icon_path: "",
+                    name: "Tailwind CSS",
+                },
+            ],
+        },
+        {
             url: "https://neos-records.onrender.com/",
             image_path: "neos-records-thumbnail.png",
             title: "Neos Records",
@@ -29,6 +49,23 @@ const Projects = () => {
             ],
         },
         {
+            url: "https://chat-rooms-app.onrender.com/",
+            image_path: "chat-rooms-thumbnail.png",
+            title: "Chatrooms",
+            description:
+                "A simple application using SocketIO in which you can join other people's 'chat rooms' or create your own.",
+            tech: [
+                {
+                    icon_path: "",
+                    name: "SocketIO",
+                },
+                {
+                    icon_path: "",
+                    name: "Javascript",
+                },
+            ],
+        },
+        {
             url: "https://askmethod.com/bucket-launch-0823",
             image_path: "bucket-thumbnail.png",
             title: "Bucket 2023 promo page",
@@ -44,24 +81,7 @@ const Projects = () => {
                 },
                 {
                     icon_path: "",
-                    name: "SASS",
-                },
-            ],
-        },
-        {
-            url: "https://chat-rooms-app.onrender.com/",
-            image_path: "chat-rooms-thumbnail.png",
-            title: "Chatrooms",
-            description:
-                "A simple application using SocketIO in which you can join other people's 'chat rooms' or create your own.",
-            tech: [
-                {
-                    icon_path: "",
-                    name: "SocketIO",
-                },
-                {
-                    icon_path: "",
-                    name: "Javascript",
+                    name: "CSS",
                 },
             ],
         },

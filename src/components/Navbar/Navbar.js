@@ -7,7 +7,7 @@ const Navbar = () => {
         {
             name: "About Me",
             icon: "home.svg",
-            path: "/about-me",
+            path: "/",
         },
         {
             name: "Projects",
