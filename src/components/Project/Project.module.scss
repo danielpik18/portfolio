@@ -7,9 +7,10 @@
     border-radius: 8px;
     padding: 0;
     outline: none;
+    color: var(--antiflash-white);
 
     &:hover {
-        transform: translateY(-5px) scale(1.025);
+        transform: translateY(-5px);
     }
 }
 
@@ -34,12 +35,10 @@
 .projectItem__text h2 {
     font-size: 18px;
     margin-bottom: 4px;
-    color: var(--raisin-black);
 }
 
 .projectItem__text p {
     font-size: 13px;
-    color: var(--paynes-gray);
 }
 
 .projectItem__image {
@@ -60,12 +59,12 @@
     display: flex;
     gap: 20px;
     list-style-type: none;
+    color: var(--brown-sugar);
 }
 
 .projectItem_tech li {
     font-size: 11px;
     font-weight: 600;
-    color: var(--cambridge-blue);
 }
 
 @media screen and (max-width: 680px) {

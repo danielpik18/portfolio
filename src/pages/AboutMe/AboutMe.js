@@ -13,8 +13,11 @@ const AboutMe = () => {
                         &#60;Hello World! &#47;&#62;
                     </h1>
                     <p>
-                        I'm <strong>Daniel Mantilla</strong>, a Web Developer
-                        based in{" "}
+                        I'm{" "}
+                        <strong style={{ color: "var(--peach-yellow" }}>
+                            Daniel Mantilla
+                        </strong>
+                        , a Web Developer based in{" "}
                         <img
                             src={
                                 require("pages/AboutMe/img/colombia.svg")

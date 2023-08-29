@@ -4,22 +4,20 @@
     max-width: 900px;
     width: 100%;
     animation: slide-right 0.85s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    z-index: 99;
 }
 
 .projects__list {
     margin-top: 60px;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    padding: 0 20px;
     gap: 40px;
     max-height: 340px;
+    overflow-y: scroll;
     overflow-x: hidden;
-}
-
-@media screen and (min-height: 900px) {
-    .projects__list {
-        max-height: 560px;
-    }
 }
 
 .projects h1 {
@@ -27,16 +25,16 @@
 }
 
 @media screen and (max-width: 992px) {
+    .projects {
+        align-self: flex-start;
+    }
     .projects__list {
         grid-template-columns: 1fr;
-        padding: 0 0 40px 0;
-        overflow-y: scroll;
     }
 }
 
 @media screen and (max-width: 680px) {
     .projects__list {
-        max-height: 450px;
         margin-top: 20px;
     }
     .projects h1 {

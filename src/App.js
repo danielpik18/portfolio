@@ -17,25 +17,23 @@ function App() {
     return (
         <div className="App">
             <section className="App-content">
-                <video id="bgVideo" autoPlay loop>
+                <video id="bgVideo" autoPlay loop muted>
                     <source src={video} type="video/mp4"></source>
                 </video>
 
+                <Routes>
+                    <Route path="/" element={<AboutMe />} />
+
+                    <Route path="/portfolio" element={<AboutMe />} />
+
+                    <Route path="/projects" element={<Projects />} />
+
+                    <Route path="/contact" element={<Contact />} />
+
+                    <Route path="*" element={<AboutMe />} />
+                </Routes>
+
                 <Navbar />
-
-                <div style={{ zIndex: "100" }}>
-                    <Routes>
-                        <Route path="/" element={<AboutMe />} />
-
-                        <Route path="/portfolio" element={<AboutMe />} />
-
-                        <Route path="/projects" element={<Projects />} />
-
-                        <Route path="/contact" element={<Contact />} />
-
-                        <Route path="*" element={<AboutMe />} />
-                    </Routes>
-                </div>
             </section>
         </div>
     );

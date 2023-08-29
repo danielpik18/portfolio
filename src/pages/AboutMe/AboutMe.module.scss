@@ -3,6 +3,10 @@
 .aboutMe :global {
     max-width: 600px;
     animation: slide-right 0.85s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    z-index: 99;
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
 }
 
 .aboutMe__sides {
@@ -30,7 +34,6 @@
     font-size: 16px;
     line-height: 28px;
     letter-spacing: 0.03px;
-    color: var(--p);
     font-weight: 300;
 }
 
