@@ -6,6 +6,7 @@
     animation: slide-right 0.85s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
     display: flex;
     align-items: center;
+    justify-content: center;
     flex-grow: 1;
     z-index: 99;
 }
@@ -18,6 +19,7 @@
     max-height: 340px;
     overflow-y: scroll;
     overflow-x: hidden;
+    padding-right: 20px;
 }
 
 .projects h1 {

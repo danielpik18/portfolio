@@ -7,10 +7,10 @@
     --lavender-blush: #f5f5f5;
     --ash-gray: #bacdb0ff;
     --cambridge-blue: #729b79ff;
-    --paynes-gray: #475b63ff;
-    --raisin-black: #2e2c2fff;
+    --paynes-gray: rgba(71, 91, 99, 1);
+    --raisin-black: rgba(46, 44, 47, 1);
 
-    --peach-yellow: rgba(247, 219, 167, 1);
+    --peach-yellow: rgba(248, 222, 126, 1);
     --atomic-tangerine: rgba(241, 171, 134, 1);
     --brown-sugar: rgba(197, 123, 87, 1);
     --gunmetal: rgba(30, 45, 47, 1);

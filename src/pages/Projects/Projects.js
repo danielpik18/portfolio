@@ -6,9 +6,11 @@ const Projects = () => {
     const projects = [
         {
             url: "https://tasks-app-self.vercel.app",
+            githubUrl: "https://github.com/danielpik18/tasks-app",
             image_path: "tasks-app-screenshot.png",
             title: "Tasks.",
-            description: "A simple app for organizing your own tasks.",
+            description:
+                "A simple app for creating and organizing your own personal tasks.",
             tech: [
                 {
                     icon_path: "",
@@ -26,9 +28,10 @@ const Projects = () => {
         },
         {
             url: "https://neos-records.onrender.com/",
+            githubUrl: "https://github.com/danielpik18/neos-records",
             image_path: "neos-records-thumbnail.png",
             title: "Neos Records",
-            description: "Demo page for Neos Record's music label website",
+            description: "A demo website for Neos Record's music label",
             tech: [
                 {
                     icon_path: "",
@@ -50,6 +53,7 @@ const Projects = () => {
         },
         {
             url: "https://chat-rooms-app.onrender.com/",
+            githubUrl: "https://github.com/danielpik18/chatroomsapp",
             image_path: "chat-rooms-thumbnail.png",
             title: "Chatrooms",
             description:
@@ -95,7 +99,10 @@ const Projects = () => {
         <div className={styles.projects}>
             <div className="container">
                 <h1 className="title">
-                    These are some projects I've worked on.
+                    These are some{" "}
+                    <span style={{ color: "var(--peach-yellow)" }}>
+                        projects I've worked on.
+                    </span>
                 </h1>
                 <div className="separator"></div>
 
