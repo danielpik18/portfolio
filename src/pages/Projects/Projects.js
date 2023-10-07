@@ -5,10 +5,32 @@ import Project from "components/Project/Project";
 const Projects = () => {
     const projects = [
         {
+            url: "https://piano-wizard.vercel.app/",
+            githubUrl: "https://github.com/danielpik18/piano-wizard",
+            image_path: "piano-wizard-thumbnail.png",
+            title: "Piano Wizard",
+            description:
+                "A nextJS app for detecting chords based on piano notes.",
+            tech: [
+                {
+                    icon_path: "",
+                    name: "NextJS",
+                },
+                {
+                    icon_path: "",
+                    name: "Firebase",
+                },
+                {
+                    icon_path: "",
+                    name: "Tailwind CSS",
+                },
+            ],
+        },
+        {
             url: "https://tasks-app-self.vercel.app",
             githubUrl: "https://github.com/danielpik18/tasks-app",
             image_path: "tasks-app-screenshot.png",
-            title: "Tasks.",
+            title: "Tasks App",
             description:
                 "A simple app for creating and organizing your own personal tasks.",
             tech: [
